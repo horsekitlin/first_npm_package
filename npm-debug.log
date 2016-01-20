@@ -1,0 +1,91 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/tomas/.nvm/versions/node/v4.2.2/bin/node',
+1 verbose cli   '/Users/tomas/.nvm/versions/node/v4.2.2/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/tomas/SourcceTree/first-npm-package',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/tomas/.npm/first-npm-package/1.0.0/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/tomas/.npm/first-npm-package/1.0.0/package.tgz',
+9 verbose tar pack   '/Users/tomas/SourcceTree/first-npm-package' ]
+10 verbose tarball /Users/tomas/.npm/first-npm-package/1.0.0/package.tgz
+11 verbose folder /Users/tomas/SourcceTree/first-npm-package
+12 info prepublish first-npm-package@1.0.0
+13 verbose addLocalTarball adding from inside cache /Users/tomas/.npm/first-npm-package/1.0.0/package.tgz
+14 silly cache afterAdd first-npm-package@1.0.0
+15 verbose afterAdd /Users/tomas/.npm/first-npm-package/1.0.0/package/package.json not in flight; writing
+16 verbose afterAdd /Users/tomas/.npm/first-npm-package/1.0.0/package/package.json written
+17 silly publish { name: 'first-npm-package',
+17 silly publish   version: '1.0.0',
+17 silly publish   description: '第一個npm package',
+17 silly publish   main: 'app.js',
+17 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+17 silly publish   keywords: [ 'npm' ],
+17 silly publish   author:
+17 silly publish    { name: 'TomasLin',
+17 silly publish      email: 'horsekit1982@gmail.com',
+17 silly publish      url: 'horsekitlin.github.io' },
+17 silly publish   license: 'MIT',
+17 silly publish   readme: 'ERROR: No README data found!',
+17 silly publish   _id: 'first-npm-package@1.0.0',
+17 silly publish   _shasum: '4ee57196cb7563bf3d691a4b09f093394ce89d74',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name first-npm-package
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/first-npm-package
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /Users/tomas/.npm/first-npm-package/1.0.0/package.tgz
+25 verbose request uri https://registry.npmjs.org/first-npm-package
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 17:23:59
+28 verbose request using bearer token for auth
+29 verbose request id ccfd3874f41d33f1
+30 http request PUT https://registry.npmjs.org/first-npm-package
+31 http 403 https://registry.npmjs.org/first-npm-package
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '109',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Wed, 20 Jan 2016 09:24:00 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-hkg6825-HKG',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1453281840.140044,VS0,VE653' }
+33 verbose request invalidating /Users/tomas/.npm/registry.npmjs.org/first-npm-package on PUT
+34 error publish Failed PUT 403
+35 verbose stack Error: You do not have permission to publish 'first-npm-package'. Are you logged in as the correct user? : first-npm-package
+35 verbose stack     at makeError (/Users/tomas/.nvm/versions/node/v4.2.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+35 verbose stack     at CachingRegistryClient.<anonymous> (/Users/tomas/.nvm/versions/node/v4.2.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+35 verbose stack     at Request._callback (/Users/tomas/.nvm/versions/node/v4.2.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+35 verbose stack     at Request.self.callback (/Users/tomas/.nvm/versions/node/v4.2.2/lib/node_modules/npm/node_modules/request/request.js:198:22)
+35 verbose stack     at emitTwo (events.js:87:13)
+35 verbose stack     at Request.emit (events.js:172:7)
+35 verbose stack     at Request.<anonymous> (/Users/tomas/.nvm/versions/node/v4.2.2/lib/node_modules/npm/node_modules/request/request.js:1063:14)
+35 verbose stack     at emitOne (events.js:82:20)
+35 verbose stack     at Request.emit (events.js:169:7)
+35 verbose stack     at IncomingMessage.<anonymous> (/Users/tomas/.nvm/versions/node/v4.2.2/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+36 verbose statusCode 403
+37 verbose pkgid first-npm-package
+38 verbose cwd /Users/tomas/SourcceTree/first-npm-package
+39 error Darwin 15.2.0
+40 error argv "/Users/tomas/.nvm/versions/node/v4.2.2/bin/node" "/Users/tomas/.nvm/versions/node/v4.2.2/bin/npm" "publish"
+41 error node v4.2.2
+42 error npm  v2.14.7
+43 error code E403
+44 error You do not have permission to publish 'first-npm-package'. Are you logged in as the correct user? : first-npm-package
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]
